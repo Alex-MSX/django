@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% extends "basic_app/base.html" %}
+
+  {% block body_block %}
+    {% load my_templates %}
+    <h1>Welcome to my Index!</h1>
+    <h2>This is other exameple of template inheritance!</h2>
+    <p>My text variable without filter: {{ var1 }}</p>
+    <p>My number variable without filter: {{ num1 }}</p>
+    <p>My text variable with filter: {{ var1 | upper }}</p>
+    <p>My number variable with filter: {{ num1 | add:'99' }}</p>
+    <p>My text variable with my custom filter: {{ var1 | custom_cut:'he' }}</p>
+  {% endblock %}
